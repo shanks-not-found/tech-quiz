@@ -1,0 +1,68 @@
+import type { Question } from "./questions-service"
+
+export const arcadeQuestions: Question[] = [
+  {
+    id: 201,
+    question: "Which arcade game features a yellow character eating dots while avoiding ghosts?",
+    answers: ["Pac-Man", "Space Invaders", "Donkey Kong", "Galaga"],
+    correctAnswer: "Pac-Man",
+    category: "arcade",
+    difficulty: "easy",
+  },
+  {
+    id: 202,
+    question: "What year was the arcade game 'Space Invaders' released?",
+    answers: ["1978", "1982", "1975", "1980"],
+    correctAnswer: "1978",
+    category: "arcade",
+    difficulty: "medium",
+  },
+  {
+    id: 203,
+    question: "Which company created the arcade game 'Street Fighter'?",
+    answers: ["Capcom", "Sega", "Namco", "Atari"],
+    correctAnswer: "Capcom",
+    category: "arcade",
+    difficulty: "medium",
+  },
+  {
+    id: 204,
+    question: "What was the first commercially successful video game?",
+    answers: ["Pong", "Tetris", "Space Invaders", "Asteroids"],
+    correctAnswer: "Pong",
+    category: "arcade",
+    difficulty: "easy",
+  },
+  {
+    id: 205,
+    question: "Which arcade game features a gorilla throwing barrels at a plumber?",
+    answers: ["Donkey Kong", "Pac-Man", "Frogger", "Galaga"],
+    correctAnswer: "Donkey Kong",
+    category: "arcade",
+    difficulty: "easy",
+  },
+  {
+    id: 206,
+    question: "What color is the ghost named 'Inky' in Pac-Man?",
+    answers: ["Blue", "Red", "Pink", "Orange"],
+    correctAnswer: "Blue",
+    category: "arcade",
+    difficulty: "medium",
+  },
+  {
+    id: 207,
+    question: "Which arcade game involves crossing a busy road and river?",
+    answers: ["Frogger", "Q*bert", "Dig Dug", "Centipede"],
+    correctAnswer: "Frogger",
+    category: "arcade",
+    difficulty: "easy",
+  },
+  {
+    id: 208,
+    question: "What was the first arcade game to use a trackball controller?",
+    answers: ["Missile Command", "Centipede", "Tempest", "Marble Madness"],
+    correctAnswer: "Missile Command",
+    category: "arcade",
+    difficulty: "hard",
+  },
+]

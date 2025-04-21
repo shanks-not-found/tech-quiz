@@ -1,0 +1,258 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 0%;
+  --foreground: 0 0% 100%;
+  --card: 0 0% 3%;
+  --card-foreground: 0 0% 100%;
+  --popover: 0 0% 3%;
+  --popover-foreground: 0 0% 100%;
+  --primary: 196 80% 50%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 270 80% 50%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 0 0% 15%;
+  --muted-foreground: 0 0% 70%;
+  --accent: 196 80% 20%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 80% 50%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 196 80% 30%;
+  --input: 196 80% 30%;
+  --ring: 196 80% 50%;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Press Start 2P", "Courier New", monospace;
+}
+
+/* Grid background */
+.grid-bg {
+  background-image: linear-gradient(to right, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center;
+  transform: perspective(500px) rotateX(30deg);
+  opacity: 0.5;
+}
+
+/* CRT effect */
+.crt-overlay {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(10, 10, 10, 0) 0%,
+    rgba(10, 10, 10, 0.8) 80%,
+    rgba(10, 10, 10, 1) 100%
+  );
+  pointer-events: none;
+}
+
+/* Scanlines */
+.scanlines {
+  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.3) 50%);
+  background-size: 100% 4px;
+  pointer-events: none;
+}
+
+/* Circuit board pattern */
+.circuit-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='100' height='100'%3E%3Cpath d='M0 50 L50 0 L100 50 L50 100 Z' fill='none' stroke='%2300ff00' stroke-width='0.5'/%3E%3Ccircle cx='50' cy='50' r='5' fill='%2300ff00' opacity='0.5'/%3E%3Cpath d='M20 50 L50 20 M50 20 L80 50 M80 50 L50 80 M50 80 L20 50' fill='none' stroke='%2300ff00' stroke-width='0.5'/%3E%3C/svg%3E");
+  opacity: 0.2;
+}
+
+.circuit-overlay {
+  background-image: linear-gradient(to right, rgba(0, 255, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 255, 0, 0.05) 1px, transparent 1px),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M10 10 L90 10 L90 90 L10 90 Z' fill='none' stroke='%2300ff00' stroke-width='0.5'/%3E%3Cpath d='M30 10 L30 30 L10 30 M70 10 L70 30 L90 30   stroke='%2300ff00' stroke-width='0.5'/%3E%3Cpath d='M30 10 L30 30 L10 30 M70 10 L70 30 L90 30 M10 70 L30 70 L30 90 M90 70 L70 70 L70 90' fill='none' stroke='%2300ff00' stroke-width='0.5'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%2300ff00' stroke-width='0.5'/%3E%3C/svg%3E");
+  background-size: 20px 20px, 20px 20px, 100px 100px;
+  background-position: center;
+  pointer-events: none;
+}
+
+/* Arcade cabinet styling */
+.arcade-cabinet {
+  pointer-events: none;
+}
+
+.cabinet-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: linear-gradient(to bottom, #222, #000);
+  border-bottom: 2px solid #444;
+}
+
+.cabinet-sides {
+  position: absolute;
+  top: 40px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-left: 20px solid #222;
+  border-right: 20px solid #222;
+}
+
+/* Retro text effects */
+.retro-text {
+  text-shadow: 0 0 5px rgba(80, 200, 255, 0.8), 0 0 10px rgba(80, 200, 255, 0.5), 0 0 15px rgba(80, 200, 255, 0.3);
+  letter-spacing: 2px;
+}
+
+.glitch-text {
+  position: relative;
+  letter-spacing: 2px;
+  text-shadow: 0 0 5px rgba(80, 200, 255, 0.8), 0 0 10px rgba(80, 200, 255, 0.5);
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch-text::before {
+  left: 2px;
+  text-shadow: -2px 0 #ff00ff;
+  animation: glitch-anim-1 2s infinite linear alternate-reverse;
+}
+
+.glitch-text::after {
+  left: -2px;
+  text-shadow: 2px 0 #00ffff;
+  animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+
+/* Drop shadow glow */
+.drop-shadow-glow {
+  filter: drop-shadow(0 0 8px rgba(0, 255, 0, 0.8));
+}
+
+/* Arcade font */
+.arcade-font {
+  font-family: "Press Start 2P", "Courier New", monospace;
+  letter-spacing: 1px;
+}
+
+/* Arcade button styling */
+.arcade-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.arcade-button::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0) 70%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  transform: rotate(30deg);
+  pointer-events: none;
+}
+
+/* Pixel art controls */
+.pixel-art-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.pixel-button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.pixel-button.red {
+  background-color: #ff0040;
+  box-shadow: 0 0 10px rgba(255, 0, 64, 0.7);
+}
+
+.pixel-button.blue {
+  background-color: #00a0ff;
+  box-shadow: 0 0 10px rgba(0, 160, 255, 0.7);
+}
+
+.pixel-button.green {
+  background-color: #00ff60;
+  box-shadow: 0 0 10px rgba(0, 255, 96, 0.7);
+}
+
+.pixel-button.yellow {
+  background-color: #ffcc00;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.7);
+}
+
+/* Pixel joystick */
+.pixel-joystick {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  50% {
+    transform: translateY(-10px) translateX(-50%);
+  }
+}
+
+@keyframes glitch-anim-1 {
+  0% {
+    clip-path: inset(20% 0 80% 0);
+  }
+  20% {
+    clip-path: inset(60% 0 40% 0);
+  }
+  40% {
+    clip-path: inset(40% 0 60% 0);
+  }
+  60% {
+    clip-path: inset(80% 0 20% 0);
+  }
+  80% {
+    clip-path: inset(10% 0 90% 0);
+  }
+  100% {
+    clip-path: inset(30% 0 70% 0);
+  }
+}
+
+@keyframes glitch-anim-2 {
+  0% {
+    clip-path: inset(10% 0 90% 0);
+  }
+  20% {
+    clip-path: inset(30% 0 70% 0);
+  }
+  40% {
+    clip-path: inset(50% 0 50% 0);
+  }
+  60% {
+    clip-path: inset(70% 0 30% 0);
+  }
+  80% {
+    clip-path: inset(90% 0 10% 0);
+  }
+  100% {
+    clip-path: inset(20% 0 80% 0);
+  }
+}

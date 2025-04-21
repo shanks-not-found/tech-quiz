@@ -1,0 +1,73 @@
+import type { Question } from "./questions-service"
+
+export const techQuestions: Question[] = [
+  {
+    id: 1,
+    question: "Who is known as the co-founder of Apple Inc. along with Steve Jobs?",
+    answers: ["Steve Wozniak", "Bill Gates", "Mark Zuckerberg", "Elon Musk"],
+    correctAnswer: "Steve Wozniak",
+    category: "tech",
+    difficulty: "easy",
+  },
+  {
+    id: 2,
+    question: "What does CPU stand for?",
+    answers: ["Central Processing Unit", "Computer Personal Unit", "Central Process Utility", "Core Processing Unit"],
+    correctAnswer: "Central Processing Unit",
+    category: "tech",
+    difficulty: "easy",
+  },
+  {
+    id: 3,
+    question: "Which programming language was created by Brendan Eich in 10 days?",
+    answers: ["JavaScript", "Python", "Java", "C++"],
+    correctAnswer: "JavaScript",
+    category: "tech",
+    difficulty: "medium",
+  },
+  {
+    id: 4,
+    question: "What year was the first iPhone released?",
+    answers: ["2007", "2005", "2010", "2008"],
+    correctAnswer: "2007",
+    category: "tech",
+    difficulty: "medium",
+  },
+  {
+    id: 5,
+    question: "Which company developed the first commercially available quantum computer?",
+    answers: ["D-Wave", "IBM", "Google", "Microsoft"],
+    correctAnswer: "D-Wave",
+    category: "tech",
+    difficulty: "hard",
+  },
+  {
+    id: 6,
+    question: "What was the name of the first computer virus that spread in the wild?",
+    answers: ["Brain", "Creeper", "Melissa", "ILOVEYOU"],
+    correctAnswer: "Brain",
+    category: "tech",
+    difficulty: "hard",
+  },
+  {
+    id: 7,
+    question: "Which of these is NOT a programming paradigm?",
+    answers: ["Quantum Programming", "Object-Oriented", "Functional", "Procedural"],
+    correctAnswer: "Quantum Programming",
+    category: "tech",
+    difficulty: "medium",
+  },
+  {
+    id: 8,
+    question: "What does HTML stand for?",
+    answers: [
+      "HyperText Markup Language",
+      "High-Tech Modern Language",
+      "HyperTransfer Markup Language",
+      "HyperText Machine Learning",
+    ],
+    correctAnswer: "HyperText Markup Language",
+    category: "tech",
+    difficulty: "easy",
+  },
+]

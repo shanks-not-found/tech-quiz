@@ -1,0 +1,68 @@
+import type { Question } from "./questions-service"
+
+export const scifiQuestions: Question[] = [
+  {
+    id: 101,
+    question: "Who wrote the novel 'Dune'?",
+    answers: ["Frank Herbert", "Isaac Asimov", "Arthur C. Clarke", "Philip K. Dick"],
+    correctAnswer: "Frank Herbert",
+    category: "scifi",
+    difficulty: "medium",
+  },
+  {
+    id: 102,
+    question: "In 'Star Wars', what is the name of Han Solo's ship?",
+    answers: ["Millennium Falcon", "Star Destroyer", "X-Wing", "TIE Fighter"],
+    correctAnswer: "Millennium Falcon",
+    category: "scifi",
+    difficulty: "easy",
+  },
+  {
+    id: 103,
+    question: "Which sci-fi film features a computer system called Skynet?",
+    answers: ["The Terminator", "The Matrix", "Blade Runner", "Alien"],
+    correctAnswer: "The Terminator",
+    category: "scifi",
+    difficulty: "easy",
+  },
+  {
+    id: 104,
+    question: "In 'Star Trek', what is the name of the Vulcan mind technique?",
+    answers: ["Mind Meld", "Mind Link", "Mind Sync", "Mind Fusion"],
+    correctAnswer: "Mind Meld",
+    category: "scifi",
+    difficulty: "medium",
+  },
+  {
+    id: 105,
+    question: "Which author wrote 'The Hitchhiker's Guide to the Galaxy'?",
+    answers: ["Douglas Adams", "Isaac Asimov", "Ray Bradbury", "Philip K. Dick"],
+    correctAnswer: "Douglas Adams",
+    category: "scifi",
+    difficulty: "medium",
+  },
+  {
+    id: 106,
+    question: "In the movie 'Blade Runner', what are the artificial beings called?",
+    answers: ["Replicants", "Cylons", "Androids", "Synthetics"],
+    correctAnswer: "Replicants",
+    category: "scifi",
+    difficulty: "medium",
+  },
+  {
+    id: 107,
+    question: "What is the name of the AI system in '2001: A Space Odyssey'?",
+    answers: ["HAL 9000", "Mother", "VIKI", "JARVIS"],
+    correctAnswer: "HAL 9000",
+    category: "scifi",
+    difficulty: "easy",
+  },
+  {
+    id: 108,
+    question: "Which sci-fi author coined the term 'cyberspace'?",
+    answers: ["William Gibson", "Neal Stephenson", "Bruce Sterling", "Philip K. Dick"],
+    correctAnswer: "William Gibson",
+    category: "scifi",
+    difficulty: "hard",
+  },
+]
